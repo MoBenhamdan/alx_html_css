@@ -1,54 +1,94 @@
-/* Make the body a flex container and stack items vertically */
+/* styles.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Source Sans Pro', sans-serif; /* Use your preferred font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
     display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ensure body takes full viewport height */
-    margin: 0; /* Remove default margin */
-  }
-  
-  /* Make the main section a flex container and stack items horizontally */
-  main {
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    width: 150px; /* Adjust logo size */
+}
+
+nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: row;
-    flex: auto; /* Allow main to grow and shrink as needed */
-  }
-  
-  /* Ensure the article takes 2/3 of the width and aside takes 1/3 */
-  article {
-    flex: 2;
-    overflow-y: auto; /* Enable vertical scroll */
-  }
-  
-  aside {
-    flex: 1;
-    overflow-y: auto; /* Enable vertical scroll */
-  }
-  
-  /* Ensure header and footer take their natural height */
-  header, footer {
-    flex: 0 0 auto; /* Do not grow or shrink */
-  }
-  body {
-    font-family: Arial, sans-serif; /* Change font for better readability */
-    color: #333; /* Set text color */
-    background-color: #f4f4f4; /* Light background color */
-  }
-  
-  header {
-    background-color: #333; /* Dark background for header */
-    color: #fff; /* White text in header */
-    padding: 1rem; /* Add some padding */
-  }
-  
-  footer {
-    background-color: #333; /* Dark background for footer */
-    color: #fff; /* White text in footer */
-    padding: 1rem; /* Add some padding */
-    text-align: center; /* Center text */
-  }
-  
-  .logo {
-    font-size: 2rem; /* Make logo larger */
-    margin-right: 10px; /* Space between logo and text */
-  }
-  
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50; /* Darker color for headings */
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    width: 100px; /* Adjust footer logo size */
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer div i {
+    margin: 0 10px;
+    font-size: 20px;
+}
