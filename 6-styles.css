@@ -1,0 +1,57 @@
+.pentagon {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #FF6565;
+    margin: 0 auto;
+}
+
+.pentagon::before {
+    content: "";
+    position: absolute;
+    top: -60px; /* Adjust this value for positioning */
+    left: -50px; /* Center the pentagon */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid #FF6565; /* Adjust color as needed */
+}
+
+.result-value {
+    position: absolute;
+    top: 20px; /* Adjust positioning inside the pentagon */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff; /* Text color */
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold;
+}
+
+.results {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px; /* Ensuring the container's width */
+    margin: 0 auto; /* Centering the results */
+}
+
+.result-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.result-item p {
+    margin-top: 10px; /* Space between value and label */
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+    .results {
+        flex-direction: column;
+        align-items: center;
+    }
+}
